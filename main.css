@@ -1,0 +1,433 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #185a9d;
+    font-family: 'Piedra', cursive;
+  
+}
+
+.mainGrid { 
+    height: 100%; 
+    width: 100%; 
+    display: grid; 
+
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 0.5fr 1fr 3fr 5fr 1fr 0.5fr;
+    grid-template-areas:
+
+        "header header"
+        "home home"
+        "aboutMe aboutMe"
+        "myPortfolio myPortfolio"
+        "contactMe contactMe"
+        "footer footer";
+    
+    gap: 100px; 
+} 
+
+    .header {
+        grid-area: header;
+        height: 300px;
+        width: 100%;
+        display: flex;
+
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+        .navBar {
+            margin: auto;  
+            height: 100%;
+            width: 85%; 
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            display: grid; 
+    
+            grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+            grid-template-areas: 
+    
+                "fa-home fa-info-circle fa-briefcas fa-address-book"; 
+        }
+
+            .navTab {
+                font-size: 30px; 
+                display: flex;  
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fa-home {
+                grid-area: fa-home;
+            } 
+
+            .fa-info-circle {
+                grid-area: fa-info-circle;
+            }
+
+            .fa-briefcase {
+                grid-area: fa-briefcase;
+            } 
+
+            .fa-address-book {
+                grid-area: fa-address-book; 
+            } 
+
+    .home {
+        grid-area: home;
+        height: 500px;
+        width: 100%;
+        display: flex; 
+    
+        justify-content: center;
+        align-items: center;
+    }
+
+        .homeGridContainer {
+            margin: auto; 
+            height: 100%;
+            width: 85%; 
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            display: grid;
+    
+            grid-template-columns: 5fr 5fr;
+            grid-template-rows: 5fr 5fr;
+            grid-template-areas: 
+    
+                "head1 head1"
+                "head2 head2";
+        } 
+
+            .head {
+                margin: 75px;    
+                font-size: 60px;
+                display: flex;  
+
+                justify-content: center;
+                align-items: center;
+            } 
+
+            #head1 {
+                grid-area: head1;
+            } 
+
+            #head2 {
+                grid-area: head2;
+            } 
+
+    .aboutMe {
+        grid-area: aboutMe;
+        height: 2000px;
+        width: 100%; 
+        display: flex;  
+
+        justify-content: center;
+        align-items: center;
+    }
+
+        .aboutMeGridContainer {
+            height: 100%; 
+            width: 85%;  
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            display: grid;
+    
+            grid-template-columns: 35% 30% 35%;
+            grid-template-rows: 10% 20% 70%;
+            grid-template-areas: 
+    
+                "aboutTitle aboutTitle aboutTitle"
+                "profilePic profilePic profilePic"
+                "aboutMe aboutMe aboutMe"; 
+        } 
+
+            .title {
+                border-radius: 25px 25px 0px 0px;
+                color: #185a9d;
+                font-size: 50px; 
+                padding: 50px; 
+                display: flex;
+        
+                align-items: center; 
+                justify-content: center;
+            } 
+
+            #aboutTitle {
+                grid-area: aboutTitle; 
+            } 
+
+            #profilePic {
+                grid-area: profilePic; 
+        
+                display: grid;
+                grid-template-columns: 35% 30% 35%;
+                grid-template-areas: 
+        
+                    "... img ..."
+            } 
+
+            #img {
+                grid-area: img;
+                height: 90%;
+                width: 90%; 
+                border: 10px solid #185a9d;
+                border-radius: 50px 50px 50px 50px; 
+                object-fit: cover; 
+                display: flex;
+                margin: auto auto;
+
+                justify-content: center;
+                align-items: center; 
+            } 
+
+            #aboutMe {
+                grid-area: aboutMe;
+                padding: 75px;
+            }
+            .para {
+                font-size: 25px; 
+            }
+
+    .myPortfolio {
+        grid-area: myPortfolio;
+        height: 2000px;
+        width: 100%; 
+        display: flex;  
+
+        justify-content: center;
+        align-items: center;
+    }
+
+        .portfolioGridContainer {
+            height: 100%; 
+            width: 85%; 
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            display: grid;
+    
+            grid-template-columns: 30% 70%;
+            grid-template-rows:  10% 18% 18% 18% 18% 18%;
+            grid-template-areas: 
+            
+                "portfolioTitle portfolioTitle"
+                "keyCodePic keyCodeReview"
+                "drumKitPic drumKitReview"
+                "diceGame1Pic diceGame1Review"
+                "diceGame2Pic diceGame2Review"
+                "weatherAppPic weatherAppReview";
+        } 
+
+            #portfolioTitle {
+                grid-area: portfolioTitle;
+            } 
+
+            .projectPic {
+                color: #185a9d;
+                padding: 10px; 
+                display: grid;
+
+                grid-template-rows: 8fr 2fr;
+                grid-template-areas: 
+
+                    "keyCodePic"
+                    "fig";
+            } 
+
+            .fig {
+                margin: auto; 
+                grid-area: fig; 
+                display: flex;  
+
+                justify-content: center;
+                align-items: center;
+            } 
+
+            .review {
+                color: #185a9d;
+                padding: 25px;
+                display: flex;
+                    
+                align-items: center;
+            } 
+
+            #keyCodePic { 
+                grid-area: keyCodePic;
+                height: 100%;
+                width: 100%; 
+                border: 5px solid #185a9d;
+                border-radius: 25px 25px 25px 25px; 
+                object-fit: cover; 
+                display: flex;
+
+                justify-content: center;
+                align-items: center; 
+            } 
+
+            #keyCodeReview {
+                grid-area: keyCodeReview;
+            } 
+
+            #drumKitPic {
+                grid-area: drumKitPic;
+                height: 100%;
+                width: 100%; 
+                border: 5px solid #185a9d;
+                border-radius: 25px 25px 25px 25px; 
+                object-fit: cover; 
+                display: flex;
+
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #drumKitReview {
+                grid-area: drumKitReview;
+            } 
+
+            #diceGame1Pic {
+                grid-area: diceGame1Pic;
+                height: 100%;
+                width: 100%; 
+                border: 5px solid #185a9d;
+                border-radius: 25px 25px 25px 25px; 
+                object-fit: cover; 
+                display: flex;
+
+                justify-content: center;
+                align-items: center; 
+            } 
+
+            #diceGame1Review {
+                grid-area: diceGame1Review;
+            } 
+
+            #diceGame2Pic {
+                grid-area: diceGame2Pic; 
+                height: 100%;
+                width: 100%; 
+                border: 5px solid #185a9d;
+                border-radius: 25px 25px 25px 25px; 
+                object-fit: cover; 
+                display: flex;
+
+                justify-content: center;
+                align-items: center; 
+            } 
+
+            #diceGame2Review {
+                grid-area: diceGame2Review;
+            } 
+
+            #weatherAppPic {
+                grid-area: weatherAppPic; 
+                height: 100%;
+                width: 100%; 
+                border: 5px solid #185a9d;
+                border-radius: 25px 25px 25px 25px; 
+                object-fit: cover; 
+                display: flex;
+
+                justify-content: center;
+                align-items: center; 
+            } 
+
+            #weatherAppReview {
+                grid-area: weatherAppReview;
+            } 
+
+    .contactMe {
+        grid-area: contactMe;
+        height: 300px;
+        width: 100%; 
+        display: flex;  
+
+        justify-content: center;
+        align-items: center;
+    } 
+
+        .contactMeGridContainer {
+            height: 100%;
+            width: 85%;
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            display: grid; 
+
+            grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+            grid-template-areas: 
+        
+                "fa-github fa-linkedin fa-envelope fa-phone";
+        } 
+
+            .contactTab {
+                font-size: 30px;
+                display: flex;  
+                
+                justify-content: space-evenly;
+                align-items: center;
+            } 
+
+            .fa-github {
+                grid-area: fa-github;
+            } 
+
+            .fa-linkedin {
+                grid-area: fa-linkedin;
+            } 
+
+            .fa-envelope {
+                grid-area: fa-envelope; 
+            } 
+
+            .fa-phone {
+                grid-area: fa-phone;
+            }
+
+    .footer {
+        margin-bottom: 50px; 
+        grid-area: footer;
+        height: 300px;
+        width: 100%; 
+        display: flex;  
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+        .footerGridContainer {
+            height: 100%;
+            width: 85%;
+            background-color: #43cea2; 
+            color: #185a9d;
+            border-radius: 25px 25px 25px 25px;
+            font-size: 50px; 
+            display: grid;
+
+            grid-template-columns: 5fr 5fr;
+            grid-template-rows: 5fr 5fr;
+            grid-template-areas: 
+
+                "footerTop footerTop"
+                "footerBottom footerBottom"
+        } 
+
+            #footerTop {
+                grid-area: footerTop;
+                display: flex;  
+        
+                justify-content: center;
+                align-items: center;
+            } 
+
+            #footerBottom {
+                grid-area: footerBottom;
+                display: flex;  
+        
+                justify-content: center;
+                align-items: center;
+            } 
