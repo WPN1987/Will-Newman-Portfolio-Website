@@ -18,30 +18,39 @@
     <header class = "header">
         <nav class = "navBar">
             <div class = "navTab"> 
-                <span class = "fas fa-home">
+                <a href = "#home">
+                    <span class = "fas fa-home">  
+                    </span>
                     Home
-                </span>
+                </a>
+               
             </div>
             <div class = "navTab">
-                <span class = "fas fa-info-circle">
-                    About Me
-                </span>
+               <a href = "#aboutMe">
+                    <span class = "fas fa-info-circle">
+                    </span>
+                    About
+               </a>
             </div> 
             <div class = "navTab">
-                <span class = "fas fa-briefcase">
+                <a href = "#myPortfolio">
+                    <span class = "fas fa-briefcase">
+                    </span>
                     My Portfolio
-                </span>
+                </a>
             </div>
             <div class = "navTab">
-                <span class = "fas fa-address-book">
+                <a href = "#contactMe">
+                    <span class = "fas fa-address-book">
+                    </span>
                     Contact Me
-                </span>
+                </a>
             </div>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section class = "home">
+    <section class = "home" id = "home">
         <div class = "homeGridContainer">
             <h1 class = "head" id = "head1">Hello My name is Will Newman</h1>
             <h1 class = "head" id = "head2">Welcome to my portfolio website!</h1>
@@ -50,7 +59,7 @@
     <!-- End of Home Section -->
 
     <!-- About Me Section -->
-    <section class = "aboutMe">
+    <section class = "aboutMe" id = "aboutMe"> 
         <!-- Section Grid -->
         <div class = "aboutMeGridContainer">
             <!-- Section Title -->
@@ -62,7 +71,7 @@
                 <img id = "img" src = "./Portfolio-Pics/Will.png" alt = "Picture of Will Newman">
             </div> 
             <!-- My Story -->
-            <div id = "aboutMe"> 
+            <div id = "myInfo"> 
                 <p class = "para">
                     At the start of 2019, I decided to make a career change away from retail after six years working night shifts. I wanted to challenge myself and learn 
                     new skills everyday, so I embarked on a journey to learn code via the Code Nation Master Course. I aspire to become a full-stack developer in the future 
@@ -72,22 +81,28 @@
                     development industry. 
                 </p>
                 <p class = "para">
-                        During the Master Course at Code Nation I have gained skills in, Javascript, HTML, CSS and learning how to problem solve using charts, diagrams and psuedo 
-                        code. I have also learnt skills in Node.js, introduction to testing using jest, React, using the terminal and command line, using git and git hub. I am 
-                        looking to use the skills I have learnt to help develop my career by earning an apprenticeship so I can return to Code Nation and improve my knowledge and 
-                        build my web tool box further. 
+                    During the Master Course at Code Nation I have gained skills in, Javascript, HTML, CSS and learning how to problem solve using charts, diagrams and psuedo 
+                    code. I have also learnt skills in Node.js, introduction to testing using jest, React, using the terminal and command line, using git and git hub. I am 
+                    looking to use the skills I have learnt to help develop my career by earning an apprenticeship so I can return to Code Nation and improve my knowledge and 
+                    build my web tool box further. 
                 </p>
                 <p class = "para">
                     I have also attended Aberystwyth University, where I graduated with a Business and Management degree BSc (Econ) in 2011 and a Management and Marketing MSc
                     (Econ) degree in 2013. 
                 </p>
+                <p class = "para">
+                    My main interest is spending time with family, friends and going for walks with my partner. A big interest of mine is football, and I have spent the majority 
+                    of my life playing and watching football, I support Manchester United FC and England. Although I have not played football in a while, I found playing a great 
+                    way to stay fit and meet new people. I tend to spend more time enjoying the tactical analysis of football. I also lke watching films and series, such as the 
+                    Marvel Cinematic Universe films, and I am massive fan of Game of Thrones. Other interests include gaming on my PS4 and listening to music.
+                </p>
             </div>
-        </div>
+        </div> 
     </section>
     <!-- End of About Me Section -->
 
     <!-- My Portfolio section-->
-    <section class = "myPortfolio">
+    <section class = "myPortfolio" id = "myPortfolio">
         <!-- Import Screenshots of projects from my github account -->
         <!-- Written Reviews of each project -->
         <!-- Section Grid -->
@@ -97,30 +112,36 @@
                 My Projects
             </div>
 
+            <!-- Project Review -->
+            <div class = "projectReview">
+                <p class = "para">
+                    During my time at Code Nation I have not just been learning and gaining new skills, but I have actualy been working on different projects throughout the course 
+                    to help showcase my understanding of what I have learnt through out the course. 
+                </p>
+            </div>
+
             <!-- Portfolio Item 1 - KeyCode Project -->
             <div class = "projectPic">
-                <figure >
+                <figure>
                     <img id = "keyCodePic" src = "./Portfolio-Pics/KeyCode.png" alt = "KeyCode Project">
                     <figcaption class = "fig">
-                        Fig.1 Screenshot of my KeyCode Project 
+                        <a href = "https://wpn1987.github.io/KeyCode-Project/"> 
+                            Fig.1 Screenshot of my KeyCode Project 
+                        </a>
                     </figcaption>
                 </figure> 
-            </div> 
-            <div class = "review" id = "keyCodeReview">
-                <a href = "https://wpn1987.github.io/KeyCode-Project/">KeyCode Project</a>
             </div> 
 
             <!-- Portfolio Item 2 - DrumKit Project -->
             <div class = "projectPic">
                 <figure>
                     <img id = "drumKitPic" src = "./Portfolio-Pics/DrumKit.png" alt = "DrumKit Project">
-                    <figcaption class = "fig">
-                        Fig.2 Screenshot of my Drumkit Project
+                    <figcaption class = "fig"> 
+                        <a href = "https://wpn1987.github.io/JS-Drum-kit-Challenge/">
+                            Fig.2 Screenshot of my Drumkit Project
+                        </a>
                     </figcaption>
                 </figure>
-            </div>
-            <div class = "review" id = "drumKitReview">
-                <a href = "https://wpn1987.github.io/JS-Drum-kit-Challenge/">DrumKit Project</a>
             </div>
 
             <!-- Portfolio Item 3 - 1 Player Dice Game -->
@@ -128,12 +149,11 @@
                 <figure>
                     <img id = "diceGame1Pic" src = "./Portfolio-Pics/DiceGame1.png" alt = "Dice Game 1 Player Project">
                     <figcaption class = "fig">
-                        Fig.3 Screenshot of my 1 Player Dice Game Project 
+                        <a href = "https://wpn1987.github.io/JS-Dice-Game/"> 
+                            Fig.3 Screenshot of my 1 Player Dice Game Project 
+                        </a>
                     </figcaption>
                 </figure>
-            </div>
-            <div class = "review" id = "diceGame1Review">
-                <a href = "https://wpn1987.github.io/JS-Dice-Game/">1 Player Dice Game Project</a>
             </div>
 
             <!-- Portfolio Item 4 - 2 Player Dice Game -->
@@ -141,32 +161,31 @@
                 <figure>
                     <img id = "diceGame2Pic" src = "./Portfolio-Pics/DiceGame2.png" alt = "Dice Game 2 Player Project">
                     <figcaption class = "fig">
-                        Fig.4 Screenshot of 2 Player Dice Game Project 
+                        <a href = "https://wpn1987.github.io/JS-Dice-Game-Two-Player/">
+                            Fig.4 Screenshot of 2 Player Dice Game Project 
+                        </a>
                     </figcaption>
                 </figure> 
             </div> 
-            <div class = "review" id = "diceGame2Review">
-                <a href = "https://wpn1987.github.io/JS-Dice-Game-Two-Player/">2 Player Dice Game Project</a>
-            </div>
 
-            <!-- Portfolio Item 5 - Weather App -->
+            <!-- Portfolio Item 5 - Weather App --> 
             <div class = "projectPic">
-                <figure>
+                <figure> 
                     <img id = "weatherAppPic" src = "./Portfolio-Pics/WeatherApp.png" alt = "Weather App Project">
                     <figcaption class = "fig">
-                        Fig.5 Screenshot of Weather App 
+                        <a href = "https://damp-lake-30314.herokuapp.com/">
+                            Fig.5 Screenshot of Weather App 
+                        </a>
                     </figcaption>
                 </figure>
             </div>
-            <div class = "review" id = "weatherAppReview">
-                <a href = "https://damp-lake-30314.herokuapp.com/">Weather App Project</a>
-            </div>
+
         </div>
     </section> 
     <!-- End of Portfolio Section -->
 
     <!-- Contact Me section -->
-    <section class = "contactMe">
+    <section class = "contactMe" id = "contactMe">
         <!-- Section Grid -->
         <div class = "contactMeGridContainer">
             <!-- github contact -->

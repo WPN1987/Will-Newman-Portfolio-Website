@@ -28,7 +28,7 @@ body {
 
     .header {
         grid-area: header;
-        height: 300px;
+        height: 200px;
         width: 100%;
         display: flex;
 
@@ -54,7 +54,7 @@ body {
             .navTab {
                 font-size: 30px; 
                 display: flex;  
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
             }
 
@@ -120,7 +120,7 @@ body {
 
     .aboutMe {
         grid-area: aboutMe;
-        height: 2000px;
+        height: 1800px;
         width: 100%; 
         display: flex;  
 
@@ -136,13 +136,13 @@ body {
             border-radius: 25px 25px 25px 25px;
             display: grid;
     
-            grid-template-columns: 35% 30% 35%;
-            grid-template-rows: 10% 20% 70%;
+            grid-template-columns: 30% 40% 30%;
+            grid-template-rows: 15% 25% 60%;
             grid-template-areas: 
     
                 "aboutTitle aboutTitle aboutTitle"
                 "profilePic profilePic profilePic"
-                "aboutMe aboutMe aboutMe"; 
+                "myInfo myInfo myInfo"; 
         } 
 
             .title {
@@ -184,8 +184,8 @@ body {
                 align-items: center; 
             } 
 
-            #aboutMe {
-                grid-area: aboutMe;
+            #myInfo {
+                grid-area: myInfo;
                 padding: 75px;
             }
             .para {
@@ -194,7 +194,7 @@ body {
 
     .myPortfolio {
         grid-area: myPortfolio;
-        height: 2000px;
+        height: 2500px;
         width: 100%; 
         display: flex;  
 
@@ -205,41 +205,46 @@ body {
         .portfolioGridContainer {
             height: 100%; 
             width: 85%; 
+            margin: auto; 
             background-color: #43cea2; 
             color: #185a9d;
             border-radius: 25px 25px 25px 25px;
             display: grid;
     
-            grid-template-columns: 30% 70%;
-            grid-template-rows:  10% 18% 18% 18% 18% 18%;
+            grid-template-columns: 50% 50%;
+            grid-template-rows:  10% 15% 25% 25% 25%; 
             grid-template-areas: 
             
                 "portfolioTitle portfolioTitle"
-                "keyCodePic keyCodeReview"
-                "drumKitPic drumKitReview"
-                "diceGame1Pic diceGame1Review"
-                "diceGame2Pic diceGame2Review"
-                "weatherAppPic weatherAppReview";
+                "projectReview projectReview"
+                "keyCodePic drumKitPic"
+                "diceGame1Pic diceGame2Pic"
+                "weatherAppPic weatherAppPic";
         } 
 
             #portfolioTitle {
-                grid-area: portfolioTitle;
+                grid-area: portfolioTitle; 
             } 
+
+            .projectReview {
+                grid-area: projectReview; 
+                padding: 75px; 
+            }
 
             .projectPic {
                 color: #185a9d;
                 padding: 10px; 
                 display: grid;
 
-                grid-template-rows: 8fr 2fr;
+
+                grid-template-rows: 9fr 1fr;
                 grid-template-areas: 
 
                     "keyCodePic"
-                    "fig";
+                    "fig"; 
             } 
 
-            .fig {
-                margin: auto; 
+            .fig { 
                 grid-area: fig; 
                 display: flex;  
 
@@ -247,19 +252,12 @@ body {
                 align-items: center;
             } 
 
-            .review {
-                color: #185a9d;
-                padding: 25px;
-                display: flex;
-                    
-                align-items: center;
-            } 
-
             #keyCodePic { 
+                margin: auto auto; 
                 grid-area: keyCodePic;
                 height: 100%;
                 width: 100%; 
-                border: 5px solid #185a9d;
+                border: 10px solid #185a9d;
                 border-radius: 25px 25px 25px 25px; 
                 object-fit: cover; 
                 display: flex;
@@ -267,16 +265,12 @@ body {
                 justify-content: center;
                 align-items: center; 
             } 
-
-            #keyCodeReview {
-                grid-area: keyCodeReview;
-            } 
-
+            
             #drumKitPic {
                 grid-area: drumKitPic;
                 height: 100%;
                 width: 100%; 
-                border: 5px solid #185a9d;
+                border: 10px solid #185a9d;
                 border-radius: 25px 25px 25px 25px; 
                 object-fit: cover; 
                 display: flex;
@@ -285,49 +279,37 @@ body {
                 align-items: center; 
             }
 
-            #drumKitReview {
-                grid-area: drumKitReview;
-            } 
-
             #diceGame1Pic {
                 grid-area: diceGame1Pic;
                 height: 100%;
                 width: 100%; 
-                border: 5px solid #185a9d;
+                border: 10px solid #185a9d;
                 border-radius: 25px 25px 25px 25px; 
                 object-fit: cover; 
                 display: flex;
 
                 justify-content: center;
                 align-items: center; 
-            } 
-
-            #diceGame1Review {
-                grid-area: diceGame1Review;
             } 
 
             #diceGame2Pic {
                 grid-area: diceGame2Pic; 
                 height: 100%;
                 width: 100%; 
-                border: 5px solid #185a9d;
+                border: 10px solid #185a9d;
                 border-radius: 25px 25px 25px 25px; 
                 object-fit: cover; 
                 display: flex;
 
                 justify-content: center;
                 align-items: center; 
-            } 
-
-            #diceGame2Review {
-                grid-area: diceGame2Review;
             } 
 
             #weatherAppPic {
                 grid-area: weatherAppPic; 
                 height: 100%;
                 width: 100%; 
-                border: 5px solid #185a9d;
+                border: 10px solid #185a9d;
                 border-radius: 25px 25px 25px 25px; 
                 object-fit: cover; 
                 display: flex;
@@ -336,13 +318,10 @@ body {
                 align-items: center; 
             } 
 
-            #weatherAppReview {
-                grid-area: weatherAppReview;
-            } 
 
     .contactMe {
         grid-area: contactMe;
-        height: 300px;
+        height: 250px;
         width: 100%; 
         display: flex;  
 
